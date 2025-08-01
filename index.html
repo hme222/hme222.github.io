@@ -1,39 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"> 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-    <title>Hillary Esposito's Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Hillary Esposito's Portfolio</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./CSS/style.css" />
 </head>
+
 <body>
-     <div id="smooth-wrapper">
+  <!-- Loader -->
+  <div id="loader">
+    <div class="loader-text">Loading...</div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="assets/logo-cat.png" alt="Site Logo" class="cat-logo" />
+      Hillary Esposito
+    </div>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <ul class="menu">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+    </ul>
+    <button id="theme-toggle">🌓</button>
+  </nav>
+
+  <!-- Smooth Scroll Wrapper -->
+  <div id="smooth-wrapper">
     <div id="smooth-content">
 
+      <!-- Hero Section -->
       <header>
         <h1 class="hero-title">Hillary Esposito</h1>
+        <p class="fade-text">Hey there!</p>
+        <p class="fade-text">Glad you are here! I’m a UX designer who codes.</p>
       </header>
-    <h1> Hey there!</h1>
-    <p>Glad you are here !! I am a UX designer who codes.  </p>
-    <a href="about.html"> About Me </a>
-    <p> </p>
-    <a href="projects.html">My Projects</a>
 
+      <!-- Links -->
+      <a href="about.html">About Me</a>
+      <br />
+      <a href="projects.html">My Projects</a>
 
+      <!-- Footer -->
       <footer>
-        <p>© 2025 Your Name</p>
+        <p>© 2025 Hillary Esposito</p>
       </footer>
-
     </div>
   </div>
 
+  <!-- Optional: Custom Cursor -->
   <div id="custom-cursor" class="cursor"></div>
 
-  <!-- JS Libraries -->
+  <!-- JavaScript Libraries -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.35/bundled/lenis.min.js"></script>
-  <script src="script.js"></script>
+  <script src="JS/script.js"></script>
 </body>
 </html>

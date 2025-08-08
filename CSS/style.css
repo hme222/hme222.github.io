@@ -6,6 +6,63 @@
   padding: 15px 30px;
 }
 
+/* Loader full screen */
+#loader {
+  position: fixed;
+  inset: 0;
+  background: #121212; /* dark bg */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+/* loader name  */
+.loader-name {
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: white;
+  opacity: 0;
+  letter-spacing: 2px;
+}
+
+/* Cat logo */
+.loader-cat {
+  width: 40px;
+  height: auto;
+  opacity: 0;
+  transform: scale(0);
+}
+
+/* Loader container */
+#loader {
+  position: fixed;
+  inset: 0;
+  background: #121212; /* Dark background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Loader inner content */
+.loader-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Cat logo for reveal */
+.loader-cat {
+  width: 100px;
+  height: auto;
+  opacity: 0;
+   transform: scale(0.8) rotate(-8deg);
+  filter: blur(8px);
+  clip-path: inset(100% 0 0 0); /* Fully hidden from top */
+}
+
 /* Logo container */
 .logo {
   display: flex;

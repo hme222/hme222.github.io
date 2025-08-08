@@ -25,6 +25,7 @@ if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
     }
   );
 
+
   // Scroll-triggered animations for .project elements
   gsap.utils.toArray(".project").forEach((el, i) => {
     gsap.from(el, {
@@ -58,15 +59,44 @@ if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
 }
 
 // ===== Loader Animation =====
+
 window.addEventListener("load", () => {
-  const loader = document.getElementById("loader");
-  if (loader) {
-    gsap.to(loader, {
-      opacity: 0,
-      duration: 1,
-      onComplete: () => (loader.style.display = "none"),
-    });
-  }
+  const tl = gsap.timeline();
+
+  // Cat reveal
+  tl.to(".loader-cat", {
+    clipPath: "inset(0% 0 0 0)",
+    opacity: 1,
+    filter: "blur(0px)",
+    duration: 1.2,
+    ease: "power2.out"
+  })
+  // Rotate upright + bounce
+  .to(".loader-cat", {
+    rotate: 0,
+    scale: 1,
+    duration: 0.8,
+    ease: "back.out(1.7)"
+  }, "-=0.6")
+  // Cat slides up like a curtain
+  .to("#loader", {
+    y: "-100%",
+    duration: 1,
+    ease: "power2.inOut"
+  })
+  // Hero title appears right after loader moves
+  .fromTo(".hero-title",
+    { opacity: 0, clipPath: "inset(0 0 100% 0)" },
+    {
+      opacity: 1,
+      clipPath: "inset(0 0 0% 0)",
+      duration: 1.2,
+      ease: "power3.out"
+    },
+    "-=0.5" // overlaps slightly for smoothness
+  )
+  // Remove loader from DOM
+  .set("#loader", { display: "none" });
 });
 
 // ===== Mobile Menu Toggle =====

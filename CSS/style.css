@@ -15,7 +15,7 @@
 
 /* Cat logo image */
 .cat-logo {
-  height: 32px; /* adjust this number for size */
+  height: 80px; /* adjust this number for size */
   width: auto; /* keeps proportions */
   object-fit: contain;
   display: block;

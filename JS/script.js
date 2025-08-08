@@ -46,8 +46,8 @@ if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
     gsap.from(el, {
       opacity: 0,
       y: 30,
-      duration: 1,
-      delay: 0.5 + i * 0.3,
+      duration: 3,
+      delay: 1 + i * 0.3,
       ease: "power2.out",
       scrollTrigger: {
         trigger: el,

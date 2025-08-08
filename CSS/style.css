@@ -1,3 +1,43 @@
+/* Navbar layout */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+}
+
+/* Logo container */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between logo and name */
+}
+
+/* Cat logo image */
+.cat-logo {
+  height: 32px; /* adjust this number for size */
+  width: auto; /* keeps proportions */
+  object-fit: contain;
+  display: block;
+}
+
+/* Text next to logo */
+.logo-text {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* Make it a bit smaller on mobile */
+@media (max-width: 768px) {
+  .cat-logo {
+    height: 26px;
+  }
+  .logo-text {
+    font-size: 1rem;
+  }
+}
+
 /* ===== Hero Title (Smooth Load) ===== */
 .hero-title {
   opacity: 0;

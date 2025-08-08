@@ -1,17 +1,19 @@
-/* Smooth load */
+/* ===== Hero Title (Smooth Load) ===== */
 .hero-title {
   opacity: 0;
   clip-path: inset(0 0 100% 0);
-  transition: all 0.3s ease;
+  transition: clip-path 0.6s ease, opacity 0.6s ease;
+  will-change: clip-path, opacity;
 }
 
-/* Fade text */
+/* ===== Fade Text ===== */
 .fade-text {
   opacity: 0;
   transform: translateY(30px);
+  will-change: opacity, transform;
 }
 
-/* Custom Cursor */
+/* ===== Custom Cursor ===== */
 #custom-cursor {
   width: 20px;
   height: 20px;
@@ -22,9 +24,10 @@
   mix-blend-mode: difference;
   z-index: 9999;
   transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out;
 }
 
-/* Dark Theme Toggle */
+/* ===== Dark Theme ===== */
 body.dark {
   background: #121212;
   color: #e0e0e0;
@@ -34,16 +37,29 @@ body.dark a {
   color: #90caf9;
 }
 
-/* Mobile Menu Toggle */
+/* ===== Mobile Menu ===== */
 .menu {
   display: none;
+  flex-direction: column;
+  gap: 10px;
+  background: white;
+  padding: 10px;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .menu.open {
-  display: block;
+  display: flex;
 }
 
-/* lenis basic */
+body.dark .menu {
+  background: #1e1e1e;
+}
+
+/* ===== Lenis Scroll Defaults ===== */
 html.lenis,
 html.lenis body {
   height: auto;
@@ -65,4 +81,19 @@ html.lenis body {
   transition-property: overflow;
   transition-duration: 1ms;
   transition-behavior: allow-discrete;
+}
+
+/* ===== Basic Responsive Styles ===== */
+@media (max-width: 768px) {
+  nav.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .menu-toggle {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
 }

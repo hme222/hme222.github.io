@@ -6,16 +6,18 @@
   padding: 15px 30px;
 }
 
-/* Loader full screen */
+/* Loader background */
 #loader {
   position: fixed;
   inset: 0;
-  background: #121212; /* dark bg */
+  background: #121212;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 9999;
+  overflow: hidden;
 }
+
 /* loader name  */
 .loader-name {
   font-family: "Inter", sans-serif;
@@ -26,13 +28,15 @@
   letter-spacing: 2px;
 }
 
-/* Cat logo */
+/* Cat inside loader */
 .loader-cat {
-  width: 40px;
-  height: auto;
+  width: 110px;
   opacity: 0;
-  transform: scale(0);
+  transform: scale(0.8) rotate(-8deg);
+  filter: blur(8px);
+  clip-path: inset(100% 0 0 0);
 }
+
 
 /* Loader container */
 #loader {
@@ -106,7 +110,8 @@
 /* ===== Fade Text ===== */
 .fade-text {
   opacity: 0;
-  transform: translateY(30px);
+  transform: translateY(20px);
+  color: white;
   will-change: opacity, transform;
 }
 

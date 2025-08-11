@@ -3,50 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hillary Esposito's Portfolio</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/favicon.png" />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
-
   <!-- CSS -->
   <link rel="stylesheet" href="CSS/style.css" />
 </head>
-
 <body>
   <!-- Loader -->
   <div id="loader">
-    <div class="loader-content"> 
-      <img src="assets/logo-cat.png" alt="Loading Logo" class="loader-cat"/>
-      <!-- <h1 class="loader-name"> Hillary Esposito </h1> -->
-    </div>
+    <div class="loader-bg"></div>
+    <img src="assets/logo-cat.png" alt="Cat Logo" class="loader-cat" />
   </div>
 
   <!-- Navbar -->
   <nav class="navbar">
     <div class="logo">
-      <img src="assets/logo-cat.png" alt="Site Logo" class="cat-logo" />  <span class="logo-text">Hillary Esposito</span>
-  </div>
-    <div class="menu-toggle" id="menu-toggle">☰</div>
+      <img src="assets/logo-cat.png" alt="Cat Logo" class="cat-logo" />
+      <span class="logo-text">Hillary Esposito</span>
+    </div>
     <ul class="menu">
-      <li><a href="about.html">About</a></li>
-      <li><a href="projects.html">Projects</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
     </ul>
-    <button id="theme-toggle">🌓</button>
+    <div class="nav-actions">
+      <button id="theme-toggle">🌓</button>
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+    </div>
   </nav>
 
   <!-- Smooth Scroll Wrapper -->
   <div id="smooth-wrapper">
     <div id="smooth-content">
-
-      <!-- Hero Section -->
-      <header>
+      <!-- Hero -->
+      <header class="hero">
         <h1 class="hero-title">Hillary Esposito</h1>
         <p class="fade-text">Hey there!</p>
         <p class="fade-text">Glad you are here! I’m a UX designer who codes.</p>
       </header>
 
+      <!-- Links -->
+      <section class="quick-links">
+        <a href="about.html" class="btn">About Me</a>
+        <a href="projects.html" class="btn">My Projects</a>
+      </section>
       <!-- Links -->
       
 

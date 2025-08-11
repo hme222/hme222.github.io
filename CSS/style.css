@@ -1,12 +1,4 @@
-/* Navbar layout */
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 30px;
-}
-
-/* Loader background */
+/* Loader */
 #loader {
   position: fixed;
   inset: 0;
@@ -15,107 +7,119 @@
   align-items: center;
   justify-content: center;
   z-index: 9999;
-  overflow: hidden;
 }
 
-/* loader name  */
-.loader-name {
-  font-family: "Inter", sans-serif;
-  font-weight: 900;
-  font-size: 1.5rem;
-  color: white;
-  opacity: 0;
-  letter-spacing: 2px;
+.loader-bg {
+  position: absolute;
+  inset: 0;
+  background: #ffcc00;
+  transform: scaleX(0);
+  transform-origin: left;
 }
 
-/* Cat inside loader */
 .loader-cat {
   width: 110px;
   opacity: 0;
   transform: scale(0.8) rotate(-8deg);
   filter: blur(8px);
-  clip-path: inset(100% 0 0 0);
 }
 
-
-/* Loader container */
-#loader {
-  position: fixed;
-  inset: 0;
-  background: #121212; /* Dark background */
+/* Navbar */
+.navbar {
   display: flex;
   align-items: center;
-  justify-content: center;
-  z-index: 9999;
+  justify-content: space-between;
+  padding: 18px 40px;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 10;
 }
 
-/* Loader inner content */
-.loader-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-/* Cat logo for reveal */
-.loader-cat {
-  width: 100px;
-  height: auto;
-  opacity: 0;
-   transform: scale(0.8) rotate(-8deg);
-  filter: blur(8px);
-  clip-path: inset(100% 0 0 0); /* Fully hidden from top */
-}
-
-/* Logo container */
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px; /* space between logo and name */
+  gap: 10px;
 }
 
-/* Cat logo image */
 .cat-logo {
-  height: 80px; /* adjust this number for size */
-  width: auto; /* keeps proportions */
-  object-fit: contain;
-  display: block;
+  height: 32px;
+  width: auto;
 }
 
-/* Text next to logo */
 .logo-text {
-  font-family: "Inter", sans-serif;
   font-weight: 700;
   font-size: 1.1rem;
 }
 
-/* Make it a bit smaller on mobile */
-@media (max-width: 768px) {
-  .cat-logo {
-    height: 26px;
-  }
-  .logo-text {
-    font-size: 1rem;
-  }
+.menu {
+  display: flex;
+  gap: 25px;
+  list-style: none;
 }
 
-/* ===== Hero Title (Smooth Load) ===== */
+.menu a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #333;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 40px;
+    flex-direction: column;
+    gap: 15px;
+    background: white;
+    padding: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  }
+  .menu.open { display: flex; }
+  .menu-toggle { display: block; }
+}
+
+/* Hero */
+.hero {
+  padding: 80px 20px;
+  text-align: center;
+}
+
 .hero-title {
+  font-size: 2.5rem;
   opacity: 0;
   clip-path: inset(0 0 100% 0);
-  transition: clip-path 0.6s ease, opacity 0.6s ease;
-  will-change: clip-path, opacity;
 }
 
-/* ===== Fade Text ===== */
 .fade-text {
   opacity: 0;
-  transform: translateY(20px);
-  color: white;
-  will-change: opacity, transform;
+  transform: translateY(30px);
 }
 
-/* ===== Custom Cursor ===== */
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  margin: 10px;
+}
+
+/* Custom Cursor */
 #custom-cursor {
   width: 20px;
   height: 20px;
@@ -126,76 +130,4 @@
   mix-blend-mode: difference;
   z-index: 9999;
   transform: translate(-50%, -50%);
-  transition: transform 0.1s ease-out;
-}
-
-/* ===== Dark Theme ===== */
-body.dark {
-  background: #121212;
-  color: #e0e0e0;
-}
-
-body.dark a {
-  color: #90caf9;
-}
-
-/* ===== Mobile Menu ===== */
-.menu {
-  display: none;
-  flex-direction: column;
-  gap: 10px;
-  background: white;
-  padding: 10px;
-  position: absolute;
-  top: 60px;
-  right: 10px;
-  border-radius: 5px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.menu.open {
-  display: flex;
-}
-
-body.dark .menu {
-  background: #1e1e1e;
-}
-
-/* ===== Lenis Scroll Defaults ===== */
-html.lenis,
-html.lenis body {
-  height: auto;
-}
-
-.lenis:not(.lenis-autoToggle).lenis-stopped {
-  overflow: clip;
-}
-
-.lenis.lenis-smooth [data-lenis-prevent] {
-  overscroll-behavior: contain;
-}
-
-.lenis.lenis-smooth iframe {
-  pointer-events: none;
-}
-
-.lenis.lenis-autoToggle {
-  transition-property: overflow;
-  transition-duration: 1ms;
-  transition-behavior: allow-discrete;
-}
-
-/* ===== Basic Responsive Styles ===== */
-@media (max-width: 768px) {
-  nav.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-  }
-
-  .menu-toggle {
-    font-size: 1.5rem;
-    cursor: pointer;
-  }
 }

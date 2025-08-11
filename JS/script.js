@@ -1,126 +1,61 @@
-// ===== Smooth Scroll with Lenis =====
-if (typeof Lenis !== "undefined") {
-  const lenis = new Lenis();
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  }
-  requestAnimationFrame(raf);
-}
-
-// ===== GSAP Plugins =====
-if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger);
-
-  // Hero Title Animation with Clip Path
-  gsap.fromTo(
-    ".hero-title",
-    { opacity: 0, clipPath: "inset(0 0 100% 0)" },
-    {
-      opacity: 1,
-      clipPath: "inset(0 0 0% 0)",
-      duration: 1.5,
-      ease: "power3.out",
-      delay: 0.5,
-    }
-  );
-
-
-  // Scroll-triggered animations for .project elements
-  gsap.utils.toArray(".project").forEach((el, i) => {
-    gsap.from(el, {
-      scrollTrigger: {
-        trigger: el,
-        start: "top 80%",
-        toggleActions: "play none none none",
-      },
-      opacity: 0,
-      y: 60,
-      duration: 1,
-      delay: i * 0.1,
-      ease: "power3.out",
-    });
-  });
-
-  // Fade-in staggered text
-  gsap.utils.toArray(".fade-text").forEach((el, i) => {
-    gsap.from(el, {
-      opacity: 0,
-      y: 30,
-      duration: 3,
-      delay: 1 + i * 0.3,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: el,
-        start: "top 90%",
-      },
-    });
-  });
-}
-
-// ===== Loader Animation =====
-
+// Loader animation
 window.addEventListener("load", () => {
   const tl = gsap.timeline();
 
-  // Cat reveal
-  tl.to(".loader-cat", {
-    clipPath: "inset(0% 0 0 0)",
+  tl.to(".loader-bg", {
+    scaleX: 1,
+    duration: 0.8,
+    ease: "power2.inOut"
+  })
+  .to(".loader-cat", {
     opacity: 1,
     filter: "blur(0px)",
-    duration: 1.2,
-    ease: "power2.out"
-  })
-  // Rotate upright + bounce
-  .to(".loader-cat", {
     rotate: 0,
     scale: 1,
-    duration: 0.8,
+    duration: 1,
     ease: "back.out(1.7)"
-  }, "-=0.6")
-  // Cat slides up like a curtain
+  }, "-=0.4")
   .to("#loader", {
     y: "-100%",
     duration: 1,
     ease: "power2.inOut"
-  })
-  // Hero title appears right after loader moves
+  }, "+=0.5")
   .fromTo(".hero-title",
     { opacity: 0, clipPath: "inset(0 0 100% 0)" },
-    {
-      opacity: 1,
-      clipPath: "inset(0 0 0% 0)",
-      duration: 1.2,
-      ease: "power3.out"
-    },
-    "-=0.5" // overlaps slightly for smoothness
+    { opacity: 1, clipPath: "inset(0 0 0% 0)", duration: 1.2, ease: "power3.out" },
+    "-=0.6"
   )
-  // Remove loader from DOM
+  .from(".fade-text", {
+    opacity: 0,
+    y: 20,
+    duration: 0.8,
+    stagger: 0.25,
+    ease: "power2.out"
+  }, "-=0.8")
   .set("#loader", { display: "none" });
 });
 
-// ===== Mobile Menu Toggle =====
-const menuToggle = document.getElementById("menu-toggle");
-if (menuToggle) {
-  menuToggle.addEventListener("click", () => {
-    const menu = document.querySelector(".menu");
-    if (menu) menu.classList.toggle("open");
-  });
+// Smooth Scroll with Lenis
+const lenis = new Lenis();
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
 }
+requestAnimationFrame(raf);
 
-// ===== Dark Mode Toggle =====
-const themeToggle = document.getElementById("theme-toggle");
-if (themeToggle) {
-  themeToggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
-  });
-}
+// Mobile menu toggle
+document.getElementById("menu-toggle").addEventListener("click", () => {
+  document.querySelector(".menu").classList.toggle("open");
+});
 
-// ===== Custom Cursor Movement =====
+// Dark mode toggle
+document.getElementById("theme-toggle").addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+});
+
+// Custom cursor
 const cursor = document.getElementById("custom-cursor");
-if (cursor) {
-  document.addEventListener("mousemove", (e) => {
-    cursor.style.left = `${e.clientX}px`;
-    cursor.style.top = `${e.clientY}px`;
-  });
-}
+document.addEventListener("mousemove", (e) => {
+  cursor.style.left = `${e.clientX}px`;
+  cursor.style.top = `${e.clientY}px`;
+});

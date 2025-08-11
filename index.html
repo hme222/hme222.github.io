@@ -5,15 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hillary Esposito's Portfolio</title>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
-
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/favicon.png" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
 
   <!-- CSS -->
   <link rel="stylesheet" href="CSS/style.css" />
 </head>
+
 <body>
   <!-- Loader -->
   <div id="loader">
@@ -24,54 +25,56 @@
   <!-- Navbar -->
   <nav class="navbar">
     <div class="logo">
-      <img src="assets/logo-cat.png" alt="Cat Logo" class="cat-logo" />
-      <span class="logo-text">Hillary Esposito</span>
+      <img src="assets/logo-cat.png" alt="Site Logo" class="cat-logo" />
+      <span>Hillary Esposito</span>
     </div>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
     <ul class="menu">
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
     </ul>
-    <div class="nav-actions">
-      <button id="theme-toggle">🌓</button>
-      <div class="menu-toggle" id="menu-toggle">☰</div>
-    </div>
+    <button id="theme-toggle">🌓</button>
   </nav>
 
   <!-- Smooth Scroll Wrapper -->
   <div id="smooth-wrapper">
     <div id="smooth-content">
-      <!-- Hero -->
+
+      <!-- Hero Section -->
       <header class="hero">
-        <h1 class="hero-title">Hillary Esposito</h1>
-        <p class="fade-text">Hey there!</p>
-        <p class="fade-text">Glad you are here! I’m a UX designer who codes.</p>
+        <div class="hero-inner">
+          <h1 class="hero-title">Hillary Esposito</h1>
+          <p class="fade-text">Hey there!</p>
+          <p class="fade-text">Glad you are here! I’m a UX designer who codes.</p>
+        </div>
       </header>
 
       <!-- Links -->
-      <section class="quick-links">
-        <a href="about.html" class="btn">About Me</a>
-        <a href="projects.html" class="btn">My Projects</a>
+      <section id="about">
+        <h2>About Me</h2>
+        <p>This is my about section. You can learn more <a href="about.html">here</a>.</p>
       </section>
-      <!-- Links -->
-      
+
+      <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project">Project 1</div>
+        <div class="project">Project 2</div>
+      </section>
 
       <!-- Footer -->
       <footer>
         <p>© 2025 Hillary Esposito</p>
-        <img src="assets/Linkedin-Icon--Streamline-Svg-Logos.svg" alt="Linked In Link"> 
       </footer>
     </div>
   </div>
 
-  <!-- Optional: Custom Cursor -->
+  <!-- Custom Cursor -->
   <div id="custom-cursor" class="cursor"></div>
 
-  <!-- JavaScript Libraries -->
+  <!-- JS Libraries -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.35/bundled/lenis.min.js"></script>
-
-  <!-- Your Scripts -->
   <script src="JS/script.js"></script>
 </body>
 </html>

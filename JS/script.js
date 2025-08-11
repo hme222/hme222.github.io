@@ -20,10 +20,10 @@ window.addEventListener("load", () => {
     duration: 1,
     ease: "power2.inOut"
   }, "+=0.5")
+  // Hero text reveal starts AFTER loader leaves
   .fromTo(".hero-title",
     { opacity: 0, clipPath: "inset(0 0 100% 0)" },
-    { opacity: 1, clipPath: "inset(0 0 0% 0)", duration: 1.2, ease: "power3.out" },
-    "-=0.6"
+    { opacity: 1, clipPath: "inset(0 0 0% 0)", duration: 1.2, ease: "power3.out" }
   )
   .from(".fade-text", {
     opacity: 0,
@@ -56,6 +56,5 @@ document.getElementById("theme-toggle").addEventListener("click", () => {
 // Custom cursor
 const cursor = document.getElementById("custom-cursor");
 document.addEventListener("mousemove", (e) => {
-  cursor.style.left = `${e.clientX}px`;
-  cursor.style.top = `${e.clientY}px`;
+  cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
 });

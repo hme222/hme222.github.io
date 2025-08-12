@@ -10,30 +10,28 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
 
   <!-- styles -->
-  <link rel="stylesheet" href="CSS/style.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <!-- LOADER (top of document) -->
+  <!-- LOADER -->
   <div id="loader" aria-hidden="true">
     <div class="loader-bg"></div>
-    <img src="assets/logo-cat.png" alt="" class="loader-cat" />
+    <img src="assets/logo-cat.png" alt="Loading" class="loader-cat" />
   </div>
 
   <!-- NAV -->
-  <nav class="navbar" role="navigation">
+  <nav class="navbar">
     <div class="logo">
-      <img src="assets/logo-cat.png" alt="Hillary Esposito" class="cat-logo" />
+      <img src="assets/logo-cat.png" alt="Logo" class="cat-logo" />
       <span class="logo-text">Hillary Esposito</span>
     </div>
-
-    <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">☰</button>
-
-    <ul class="menu" role="menu">
-      <li role="none"><a role="menuitem" href="#about">About</a></li>
-      <li role="none"><a role="menuitem" href="#projects">Projects</a></li>
+    <button class="menu-toggle" id="menu-toggle">☰</button>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
     </ul>
-
-    <button id="theme-toggle" aria-pressed="false" title="Toggle dark mode">🌓</button>
+    <button id="theme-toggle">🌓</button>
   </nav>
 
   <!-- MAIN CONTENT -->
@@ -68,14 +66,14 @@
   </div>
 
   <!-- Custom cursor -->
-  <div id="custom-cursor" aria-hidden="true"></div>
+  <div id="custom-cursor"></div>
 
-  <!-- LIBRARIES (must load before script.js) -->
+  <!-- LIBRARIES -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.35/bundled/lenis.min.js"></script>
 
-  <!-- YOUR SCRIPT -->
-  <script src="JS/script.js"></script>
+  <!-- MAIN SCRIPT -->
+  <script src="js/script.js"></script>
 </body>
 </html>

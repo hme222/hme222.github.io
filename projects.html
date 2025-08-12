@@ -1,27 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"> 
-    <title> My Projects </title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hillary Esposito — Projects</title>
+
+  <!-- favicon + fonts -->
+  <link rel="icon" href="assets/favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
+
+  <!-- styles -->
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <h1> Class Projects </h1>
-    <h2> I have my projects that I worked on through two different bootcamps below.  </h2>
-    <p> I have previously worked with developers and UX designers in healthcare settings. </p>
+  <!-- LOADER -->
+  <div id="loader" aria-hidden="true">
+    <div class="loader-bg"></div>
+    <img src="assets/logo-cat.png" alt="Loading" class="loader-cat" />
+  </div>
 
-    <h2> UX Design Projects </h2>
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="assets/logo-cat.png" alt="Logo" class="cat-logo" />
+      <span class="logo-text">Hillary Esposito</span>
+    </div>
+    <button class="menu-toggle" id="menu-toggle">☰</button>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+    </ul>
+    <button id="theme-toggle">🌓</button>
+  </nav>
 
-    <h2> Front-End Engineering Projects </h2>
-    <p>  <b> Project 1:</b> We learned how to create the navigation and footer using html & CSS. </p> 
-    <a href="https://hme222.github.io/Hipstirred-Website/" alt="Cup of Coffee">  <img src="assets/Hipstirred.png" alt="Coffee Site"> </a>  </a>
-    
-    <p> Passion projects here. </p>
-    <h2> Resume Section </h2>
-    Resume will be here for reference. 
+  <!-- MAIN CONTENT -->
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
 
-    <a href="index.html" class="button">Click me to go back to the Main Page </a>
+      <header class="hero">
+        <div class="hero-inner">
+          <h1 class="hero-title">Class Projects</h1>
+          <p class="fade-text">I have my projects that I worked on through two different bootcamps below.</p>
+          <p class="fade-text">I have previously worked with developers and UX designers in healthcare settings.</p>
+        </div>
+      </header>
 
+      <main>
+        <section class="section fade-text">
+          <h2>UX Design Projects</h2>
+          <p>Case studies and design work will be listed here.</p>
+        </section>
+
+        <section class="section fade-text">
+          <h2>Front-End Engineering Projects</h2>
+          <p><b>Project 1:</b> We learned how to create the navigation and footer using HTML &amp; CSS.</p>
+          <a href="https://hme222.github.io/Hipstirred-Website/" alt="Cup of Coffee">
+            <img src="assets/Hipstirred.png" alt="Coffee Site" style="max-width: 100%; border-radius: 8px;">
+          </a>
+        </section>
+
+        <section class="section fade-text">
+          <h2>Passion Projects</h2>
+          <p>Personal creative coding and design experiments will be shown here.</p>
+        </section>
+
+        <section class="section fade-text">
+          <h2>Resume</h2>
+          <p>Resume will be here for reference.</p>
+        </section>
+
+        <div class="section fade-text">
+          <a href="index.html" class="button">Back to Main Page</a>
+        </div>
+      </main>
+
+      <footer>
+        <p>© 2025 Hillary Esposito</p>
+      </footer>
+
+    </div>
+  </div>
+
+  <!-- Custom cursor -->
+  <div id="custom-cursor"></div>
+
+  <!-- LIBRARIES -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.35/bundled/lenis.min.js"></script>
+
+  <!-- MAIN SCRIPT -->
+  <script src="js/script.js"></script>
 </body>
 </html>

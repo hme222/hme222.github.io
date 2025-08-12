@@ -1,93 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hillary Esposito — About</title>
-
-  <!-- favicon + fonts -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — Hillary Esposito</title>
   <link rel="icon" href="assets/favicon.png" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
-
-  <!-- styles -->
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="CSS/style.css" />
 </head>
 <body>
   <!-- LOADER -->
-  <div id="loader" aria-hidden="true">
+  <div id="loader">
     <div class="loader-bg"></div>
-    <img src="assets/logo-cat.png" alt="Loading" class="loader-cat" />
+    <img src="assets/logo-cat.png" alt="" class="loader-cat" />
   </div>
 
   <!-- NAV -->
   <nav class="navbar">
     <div class="logo">
-      <img src="assets/logo-cat.png" alt="Logo" class="cat-logo" />
+      <img src="assets/logo-cat.png" class="cat-logo" />
       <span class="logo-text">Hillary Esposito</span>
     </div>
     <button class="menu-toggle" id="menu-toggle">☰</button>
     <ul class="menu">
       <li><a href="index.html">Home</a></li>
-      <li><a href="about.html" class="active">About</a></li>
       <li><a href="projects.html">Projects</a></li>
     </ul>
     <button id="theme-toggle">🌓</button>
   </nav>
 
-  <!-- MAIN CONTENT -->
+  <!-- CONTENT -->
   <div id="smooth-wrapper">
     <div id="smooth-content">
-
       <header class="hero">
-        <div class="hero-inner">
-          <h1 class="hero-title">About Me</h1>
-          <p class="fade-text">Hi, I’m Hillary — a UX designer who codes.</p>
-          <p class="fade-text">I combine creativity, empathy, and technical skill to create digital experiences that feel great to use.</p>
-        </div>
+        <h1 class="hero-title">About Me</h1>
+        <p class="fade-text">I’m Hillary, a UX designer who codes.</p>
+        <p class="fade-text">I love creating delightful digital experiences.</p>
       </header>
-
-      <main>
-        <section class="section fade-text">
-          <h2>Background</h2>
-          <p>I have experience working in healthcare settings, collaborating with developers, UX designers, and stakeholders to create accessible and efficient tools.</p>
-        </section>
-
-        <section class="section fade-text">
-          <h2>Design Philosophy</h2>
-          <p>I believe in designing for people first. My work focuses on clarity, usability, and a touch of delight.</p>
-        </section>
-
-        <section class="section fade-text">
-          <h2>Technical Skills</h2>
-          <ul>
-            <li>UX Research & Wireframing</li>
-            <li>UI Design (Figma, Adobe XD)</li>
-            <li>HTML, CSS, JavaScript</li>
-            <li>Front-End Animation (GSAP, Lenis)</li>
-          </ul>
-        </section>
-
-        <div class="section fade-text">
-          <a href="index.html" class="button">Back to Main Page</a>
-        </div>
-      </main>
-
       <footer>
         <p>© 2025 Hillary Esposito</p>
       </footer>
-
     </div>
   </div>
 
-  <!-- Custom cursor -->
   <div id="custom-cursor"></div>
 
   <!-- LIBRARIES -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.35/bundled/lenis.min.js"></script>
-
-  <!-- MAIN SCRIPT -->
-  <script src="js/script.js"></script>
+  <script src="JS/script.js"></script>
 </body>
 </html>

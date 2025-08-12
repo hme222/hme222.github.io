@@ -10,40 +10,36 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
 
   <!-- styles -->
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="CSS/style.css" />
 </head>
 <body>
   <!-- LOADER -->
   <div id="loader" aria-hidden="true">
     <div class="loader-bg"></div>
-    <img src="assets/logo-cat.png" alt="Loading" class="loader-cat" />
+    <img src="assets/logo-cat.png" alt="" class="loader-cat" />
   </div>
 
   <!-- NAV -->
-  <nav class="navbar">
+  <nav class="navbar" role="navigation">
     <div class="logo">
-      <img src="assets/logo-cat.png" alt="Logo" class="cat-logo" />
+      <img src="assets/logo-cat.png" alt="Hillary Esposito" class="cat-logo" />
       <span class="logo-text">Hillary Esposito</span>
     </div>
-    <button class="menu-toggle" id="menu-toggle">☰</button>
-    <ul class="menu">
-      <li><a href="index.html">Home</a></li>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">☰</button>
+    <ul class="menu" role="menu">
       <li><a href="about.html">About</a></li>
       <li><a href="projects.html">Projects</a></li>
     </ul>
-    <button id="theme-toggle">🌓</button>
+    <button id="theme-toggle" aria-pressed="false" title="Toggle dark mode">🌓</button>
   </nav>
 
   <!-- MAIN CONTENT -->
   <div id="smooth-wrapper">
     <div id="smooth-content">
-
       <header class="hero">
-        <div class="hero-inner">
-          <h1 class="hero-title">Hillary Esposito</h1>
-          <p class="fade-text">Hey there!</p>
-          <p class="fade-text">Glad you are here — I’m a UX designer who codes.</p>
-        </div>
+        <h1 class="hero-title">Hillary Esposito</h1>
+        <p class="fade-text">Hey there!</p>
+        <p class="fade-text">Glad you are here — I’m a UX designer who codes.</p>
       </header>
 
       <main>
@@ -65,7 +61,7 @@
     </div>
   </div>
 
-  <!-- Custom cursor -->
+  <!-- Cursor -->
   <div id="custom-cursor"></div>
 
   <!-- LIBRARIES -->
@@ -73,7 +69,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.35/bundled/lenis.min.js"></script>
 
-  <!-- MAIN SCRIPT -->
-  <script src="js/script.js"></script>
+  <!-- SCRIPT -->
+  <script src="JS/script.js"></script>
 </body>
 </html>

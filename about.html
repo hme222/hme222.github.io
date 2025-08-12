@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>About — Hillary Esposito</title>
   <link rel="icon" href="assets/favicon.png" />
@@ -9,19 +9,12 @@
   <link rel="stylesheet" href="CSS/style.css" />
 </head>
 <body>
-  <!-- LOADER -->
-  <div id="loader">
-    <div class="loader-bg"></div>
-    <img src="assets/logo-cat.png" alt="" class="loader-cat" />
-  </div>
+  <!-- Loader -->
+  <div id="loader"><img src="assets/logo-cat.png" alt="" class="loader-cat" /></div>
 
-  <!-- NAV -->
+  <!-- Navbar -->
   <nav class="navbar">
-    <div class="logo">
-      <img src="assets/logo-cat.png" class="cat-logo" />
-      <span class="logo-text">Hillary Esposito</span>
-    </div>
-    <button class="menu-toggle" id="menu-toggle">☰</button>
+    <div class="logo"><img src="assets/logo-cat.png" alt="" class="cat-logo" /> Hillary Esposito</div>
     <ul class="menu">
       <li><a href="index.html">Home</a></li>
       <li><a href="projects.html">Projects</a></li>
@@ -29,23 +22,32 @@
     <button id="theme-toggle">🌓</button>
   </nav>
 
-  <!-- CONTENT -->
-  <div id="smooth-wrapper">
-    <div id="smooth-content">
-      <header class="hero">
-        <h1 class="hero-title">About Me</h1>
-        <p class="fade-text">I’m Hillary, a UX designer who codes.</p>
-        <p class="fade-text">I love creating delightful digital experiences.</p>
-      </header>
-      <footer>
-        <p>© 2025 Hillary Esposito</p>
-      </footer>
-    </div>
-  </div>
+  <!-- Hero -->
+  <header class="hero">
+    <h1 class="hero-title">About Me</h1>
+    <p class="fade-text">Hi! I’m Hillary Esposito — a UX designer who codes.</p>
+  </header>
 
+  <!-- About Content -->
+  <section class="section fade-text">
+    <h2>My Story</h2>
+    <p>I love creating human-centered, visually engaging, and functional digital experiences.</p>
+    <p>I’ve collaborated with developers, designers, and clients to bring ideas to life.</p>
+  </section>
+
+  <section class="section fade-text">
+    <h2>Skills & Tools</h2>
+    <ul>
+      <li>UX/UI Design</li>
+      <li>Front-End Development</li>
+      <li>Prototyping</li>
+    </ul>
+  </section>
+
+  <footer><p>© 2025 Hillary Esposito</p></footer>
   <div id="custom-cursor"></div>
 
-  <!-- LIBRARIES -->
+  <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.35/bundled/lenis.min.js"></script>

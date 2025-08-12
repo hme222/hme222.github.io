@@ -1,50 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>About — Hillary Esposito</title>
-  <link rel="icon" href="assets/favicon.png" />
+  <link rel="icon" href="assets/logo-cat.png" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="CSS/style.css" />
 </head>
 <body>
   <!-- Loader -->
-  <div id="loader"><img src="assets/logo-cat.png" alt="" class="loader-cat" /></div>
+  <div id="loader">
+    <img src="assets/logo-cat.png" alt="Loading cat" class="loader-cat" />
+  </div>
 
   <!-- Navbar -->
   <nav class="navbar">
-    <div class="logo"><img src="assets/logo-cat.png" alt="" class="cat-logo" /> Hillary Esposito</div>
+    <div class="logo">
+      <img src="assets/logo-cat.png" alt="Logo" class="cat-logo" />
+      <span class="logo-text">Hillary Esposito</span>
+    </div>
+    <button id="menu-toggle" class="menu-toggle">☰</button>
     <ul class="menu">
       <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
       <li><a href="projects.html">Projects</a></li>
     </ul>
     <button id="theme-toggle">🌓</button>
   </nav>
 
-  <!-- Hero -->
+  <!-- Page Content -->
   <header class="hero">
-    <h1 class="hero-title">About Me</h1>
-    <p class="fade-text">Hi! I’m Hillary Esposito — a UX designer who codes.</p>
+    <div class="hero-inner">
+      <h1 class="hero-title">About Me</h1>
+      <p class="fade-text">I’m Hillary, a UX designer who codes.</p>
+    </div>
   </header>
 
-  <!-- About Content -->
   <section class="section fade-text">
-    <h2>My Story</h2>
-    <p>I love creating human-centered, visually engaging, and functional digital experiences.</p>
-    <p>I’ve collaborated with developers, designers, and clients to bring ideas to life.</p>
+    <h2>My Background</h2>
+    <p>I have a passion for crafting engaging, thoughtful web experiences that combine beauty and usability.</p>
   </section>
 
-  <section class="section fade-text">
-    <h2>Skills & Tools</h2>
-    <ul>
-      <li>UX/UI Design</li>
-      <li>Front-End Development</li>
-      <li>Prototyping</li>
-    </ul>
-  </section>
+  <footer>
+    <p>© 2025 Hillary Esposito</p>
+  </footer>
 
-  <footer><p>© 2025 Hillary Esposito</p></footer>
+  <!-- Cursor -->
   <div id="custom-cursor"></div>
 
   <!-- Scripts -->

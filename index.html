@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Hillary Esposito — Portfolio</title>
   <link rel="icon" href="assets/favicon.png" />
@@ -10,23 +10,32 @@
 </head>
 <body>
   <!-- Loader -->
-  <div id="loader"><img src="assets/logo-cat.png" alt="" class="loader-cat" /></div>
+  <div id="loader">
+    <img src="assets/logo-cat.png" alt="Loading cat" class="loader-cat" />
+  </div>
 
   <!-- Navbar -->
   <nav class="navbar">
-    <div class="logo"><img src="assets/logo-cat.png" alt="" class="cat-logo" /> Hillary Esposito</div>
+    <div class="logo">
+      <img src="assets/logo-cat.png" alt="Logo" class="cat-logo" />
+      <span class="logo-text">Hillary Esposito</span>
+    </div>
+    <button id="menu-toggle" class="menu-toggle">☰</button>
     <ul class="menu">
+      <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="projects.html">Projects</a></li>
     </ul>
     <button id="theme-toggle">🌓</button>
   </nav>
 
-  <!-- Hero -->
+  <!-- Page content -->
   <header class="hero">
-    <h1 class="hero-title">Hillary Esposito</h1>
-    <p class="fade-text">Hey there!</p>
-    <p class="fade-text">Glad you are here — I’m a UX designer who codes.</p>
+    <div class="hero-inner">
+      <h1 class="hero-title">Hillary Esposito</h1>
+      <p class="fade-text">Hey there!</p>
+      <p class="fade-text">I’m a UX designer who codes delightful experiences.</p>
+    </div>
   </header>
 
   <section id="about" class="section fade-text">
@@ -40,7 +49,11 @@
     <div class="project">Project 2</div>
   </section>
 
-  <footer><p>© 2025 Hillary Esposito</p></footer>
+  <footer>
+    <p>© 2025 Hillary Esposito</p>
+  </footer>
+
+  <!-- Cursor -->
   <div id="custom-cursor"></div>
 
   <!-- Scripts -->
